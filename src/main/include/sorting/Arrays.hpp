@@ -5,18 +5,18 @@
  *      Author: mobile
  */
 
-#ifndef INCLUDE_SORTING_ARRAYS_H_
-#define INCLUDE_SORTING_ARRAYS_H_
+#ifndef INCLUDE_SORTING_ARRAYS_HPP_
+#define INCLUDE_SORTING_ARRAYS_HPP_
 
 #include <cassert>
 
-template <typename T>
-bool operator<(T t1, T t2);
-
-template <>
-bool operator<(int t1, int t2) {
-	return t1 < t2;
-}
+//template <typename T>
+//bool operator<(T t1, T t2);
+//
+//template <>
+//bool operator<(int t1, int t2) {
+//	return t1 < t2;
+//}
 
 class Arrays {
 public:
@@ -38,7 +38,7 @@ private:
 };
 
 template <typename T>
-static void Arrays::selectionSort(T * const items, int size) {
+void Arrays::selectionSort(T * const items, int size) {
 	assert(items != NULL && size > 0);
 
 	for(int i = 0; i < size; i++) {
@@ -53,14 +53,14 @@ static void Arrays::selectionSort(T * const items, int size) {
 }
 
 template <typename T>
-static void Arrays::insertionSort(T * const items, int size) {
+void Arrays::insertionSort(T * const items, int size) {
 	assert(items != NULL && size > 0);
 }
 
 template <typename T>
-static void Arrays::shellSort(T* const items, int size) {
+void Arrays::shellSort(T* const items, int size) {
 	assert(items != NULL && size > 0);
 
 }
 
-#endif /* INCLUDE_SORTING_ARRAYS_H_ */
+#endif /* INCLUDE_SORTING_ARRAYS_HPP_ */
